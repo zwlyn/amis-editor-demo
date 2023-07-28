@@ -7,8 +7,19 @@ import {currentLocale} from 'i18n-runtime';
 import {Icon} from '../icons/index';
 import {IMainStore} from '../store';
 import '../editor/DisabledEditorPlugin'; // 用于隐藏一些不需要的Editor预置组件
+
+import '../editor/antd-table'
+import '../renderer/antd-table'
+import '../editor/antd-button'
+import '../renderer/antd-button'
+import '../renderer/antd-datepicker';
+import '../editor/antdRenderer';
 import '../renderer/MyRenderer';
 import '../editor/MyRenderer';
+import '../renderer/ZwRenderer';
+import '../editor/ZwRenderer';
+import '../renderer/game-renderer';
+import '../editor/game-renderer';
 
 let currentIndex = -1;
 

@@ -1,3 +1,11 @@
+/*
+ * @Author: zhaowei 1666013677@qq.com
+ * @Date: 2023-05-25 13:09:31
+ * @LastEditors: zhaowei 1666013677@qq.com
+ * @LastEditTime: 2023-06-01 10:01:40
+ * @FilePath: \amis-editor-demo\amis.config.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 'use strict';
 const path = require('path');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
@@ -29,6 +37,14 @@ module.exports = {
     // cssLoaderUrlDir: 'editor/fontawesome-free',
     moduleRules: [], // 用于配置自定义loaders
     plugins: [], // 用于配置自定义plugins
+    devServer: {
+      proxy: {
+        '/apiv1': {
+          target: 'http://127.0.0.1:5000',
+          pathRewrite: { '^/apiv1': '' }
+        }
+      }
+    },
   },
   dev: {
     entry: { // 本地调试模式的入口
@@ -38,7 +54,7 @@ module.exports = {
     // 用于开启本地调试模式的相关配置信息
     NODE_ENV: 'development',
     ignoreNodeModules: false, // 打包时是否忽略 node_modules
-    port: 80,
+    port: 8888,
     autoOpenBrowser: true,
     assetsPublicPath: '/', // 设置静态资源的引用路径（根域名+路径）
     assetsSubDirectory: '',

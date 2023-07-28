@@ -1,3 +1,11 @@
+/*
+ * @Author: zhaowei 1666013677@qq.com
+ * @Date: 2023-05-25 13:09:32
+ * @LastEditors: zhaowei 1666013677@qq.com
+ * @LastEditTime: 2023-05-26 09:26:35
+ * @FilePath: \amis-learn\amis-editor-demo\src\editor\MyRenderer.tsx
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import React from 'react';
 import {RendererEditor, BasicEditor} from 'amis-editor';
 
@@ -14,11 +22,11 @@ import {RendererEditor, BasicEditor} from 'amis-editor';
   scaffold: {
     // 拖入组件里面时的初始数据
     type: 'my-renderer',
-    target: '233'
+    target: '266666666'
   }
 })
 export default class MyRendererEditor extends BasicEditor {
-  tipName = '自定义组件';
+  tipName = '自定义组件zw';
   settingsSchema = {
     title: '自定义组件配置',
     body: [
